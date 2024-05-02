@@ -50,9 +50,11 @@ function onLoad() {
             const add_button = document.createElement('a');
             add_button.href = '#';
             add_button.id = localStorage_products_list_id[0];
-            add_button.onclick = function () { 
-                buy_product_display(localStorage_products_list_id[0],localStorage_products_list_id[1],localStorage_products_list[i + 1]);
-            }
+            add_button.onclick = (function(name, price, quantity) {
+                return function() {
+                    buy_product_display(name, price, quantity);
+                };
+            })(localStorage_products_list_id[0], localStorage_products_list_id[1], localStorage_products_list[i + 1]);
             add_button.textContent = '+';
             add_button_product.appendChild(add_button);
             ul_product_list.appendChild(li_product_list);

@@ -1016,6 +1016,20 @@ a.facebookBtn.smGlobalBtn.active {
     color: #7c2c0c;
 }
 
+.nav-link {
+    white-space: nowrap;
+}
+ 
+.search-profile-buttons {
+    display: flex;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+ 
+.search-profile-buttons li {
+    margin-left: 18px; /* Add spacing between buttons */
+}
+
 
 /* copyright section end */
 
